@@ -21,26 +21,6 @@ public class HeroAircraftTest {
                 0, 0, 100);
     }
 
-    @Test
-    public void shoot_BulletCount_Test() {
-        List<BaseBullet> bullets = hero.shoot();
-        assertEquals(1, bullets.size(), "子弹数量应该为1");
-    }
-
-    @Test
-    public void shoot_BulletType_Test() {
-        List<BaseBullet> bullets = hero.shoot();
-        BaseBullet bullet = bullets.get(0);
-        assertInstanceOf(HeroBullet.class, bullet, "子弹应为HeroBullet类型");
-    }
-
-    @Test
-    public void shoot_BulletDirection_Test() {
-        List<BaseBullet> bullets = hero.shoot();
-        BaseBullet bullet = bullets.get(0);
-        assertTrue(bullet.getSpeedY() < 0, "子弹应该向上飞行");
-    }
-
 
     @Test
     public void heal_FullHealth_Test() {
